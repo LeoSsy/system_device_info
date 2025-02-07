@@ -1,7 +1,8 @@
 name: system_device_info
-description: "A new Flutter plugin project."
-version: 0.0.1
-homepage:
+description: "Get device information plugin
+."
+version: 0.0.2
+homepage: https://github.com/LeoSsy/system_device_info
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
