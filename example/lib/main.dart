@@ -16,7 +16,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _systemDeviceInfoPlugin = SystemDeviceInfo();
 
   String? _totalSize;
   String? _freeSize;
@@ -30,11 +29,11 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     try {
-      final totalSize = await _systemDeviceInfoPlugin.totalSize();
+      final totalSize = await SystemDeviceInfo.totalSize();
       final unit = ['B', 'KB', 'MB', 'GB'];
       final tp = (log(totalSize!) / log(1000)).floor();
       _totalSize = '${(totalSize / pow(1000, tp)).toStringAsFixed(2)}${unit[tp.toInt()]}';
-      final freeSize = await _systemDeviceInfoPlugin.freeSize();
+      final freeSize = await SystemDeviceInfo.freeSize();
       final tp1 = (log(freeSize!) / log(1000)).floor();
       _freeSize = '${(freeSize / pow(1000, tp)).toStringAsFixed(2)}${unit[tp1.toInt()]}';
     } on PlatformException {
