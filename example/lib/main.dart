@@ -1,25 +1,3 @@
-
-# `system_device_info`
-
-一个获取设备信息的插件。目前只添加了获取设备存储空间和可用空间的方法，后续添加更多功能。
-
-## 使用方法
-
-```dart
-
-dependencies:
-   system_device_info: ^0.0.1
-
-```
-
-# 🚀 示例
-
-
-```dart
-import 'package:system_device_info/system_device_info.dart';
-```
-
-```dart
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
@@ -86,6 +64,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-```
-
-需要新增的功能讨论区交流
